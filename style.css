@@ -229,10 +229,22 @@ h1, h2, h3, p {
   transform: translateY(0);
 }
 
-.avatar.placeholder {
+.avatar {
   width: 56px;
   height: 56px;
   border-radius: 12px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar.placeholder {
   border: 1px dashed var(--color-border);
   display: flex;
   align-items: center;
@@ -243,7 +255,6 @@ h1, h2, h3, p {
   letter-spacing: 0.05em;
   color: var(--color-text-faint);
   line-height: 1.3;
-  flex-shrink: 0;
 }
 
 .hero__id-text {
@@ -519,6 +530,12 @@ main section {
    Projects
    ============================================================ */
 
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .project-card {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -530,9 +547,23 @@ main section {
   align-items: center;
 }
 
+.project-card__shot {
+  width: 100%;
+  aspect-ratio: 1200 / 750;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-card__shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-card__shot.placeholder {
   height: 150px;
-  border-radius: var(--radius-card);
   border: 1px dashed var(--color-border);
   display: flex;
   align-items: center;
