@@ -207,6 +207,7 @@ h1, h2, h3, p {
 
 .hero {
   position: relative;
+  z-index: 0;
   padding: clamp(48px, 10vw, 120px) clamp(20px, 4vw, 48px) clamp(40px, 6vw, 64px);
   display: flex;
   flex-direction: column;
