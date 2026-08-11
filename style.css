@@ -736,6 +736,26 @@ main section {
     grid-template-columns: 1fr;
   }
 
+  /* The skewed curtain relies on travel distance, tied to panel
+     width, outrunning the skew shear, tied to card height. Below
+     this breakpoint entries stack into a single column and get
+     tall enough that the shear can exceed that travel distance,
+     leaving a diagonal strip stuck over the text. Dropping the
+     skew here removes that dependency entirely rather than
+     chasing it with a bigger number. */
+  .timeline .entry::before,
+  .timeline .entry::after {
+    transform: translateX(0%);
+  }
+
+  .timeline .entry.in-view::before {
+    transform: translateX(-110%);
+  }
+
+  .timeline .entry.in-view::after {
+    transform: translateX(110%);
+  }
+
   .footer__col--right {
     text-align: left;
   }
