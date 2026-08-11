@@ -672,6 +672,21 @@ main section {
   color: var(--color-primary);
 }
 
+.project-card__link {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  transition: color 300ms var(--ease-soft);
+}
+
+.project-card__link:hover {
+  color: var(--color-primary);
+}
+
 /* ============================================================
    Footer
    ============================================================ */
